@@ -1,7 +1,7 @@
 body {
   background-color: #f2f2f2;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -31,8 +31,8 @@ body {
 }
 
 .Results {
-  margin-bottom: 20px;
-  font-size: 24px;
+  width: 100%;
+  font-size: 15px;
   font-weight: 700;
   text-align: center;
   color: #f95959;
@@ -46,10 +46,19 @@ h1 {
   color: #e3e3e3;
 }
 
+button {
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  color: #455d7a;
+  font-size: 16px;
+  border-color: #f95959;
+}
+
 input {
   width: 50%;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 0px;
+  margin-bottom: 0px;
   background-color: #e3e3e3;
   border: none;
   border-radius: 5px;
