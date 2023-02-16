@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Tip Calculator in React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Add the bill amount, tip %, and amount of people sharing the bill. Hit Calculate.
 
 ## Available Scripts
 
