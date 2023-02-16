@@ -1,0 +1,50 @@
+import React from 'react';
+import './calc.css';
+import { useState } from 'react';
+
+function Calculator() {
+  const [bill, setBill] = useState(0);
+  const [tip, setTip] = useState(0);
+  const [people, setPeople] = useState(0);
+  const [total, setTotal] = useState(0);
+  
+  function calculateTotal(bill, tip, people) {
+    tip = (tip / 100) + 1;
+    let total = ((bill * tip) / people).toFixed(2);
+    setTotal(total);
+    if (total > 0) {
+      return <h3>${total}</h3>
+    }
+  }
+
+  return (
+    <div className="Container">
+      <h1>Tip Calculator</h1>
+        <div className="Display">
+          <h2>Bill Amount</h2>
+          <input type="number" placeholder="0.00"
+           onChange={(e) => setBill(e.target.value)}
+           />
+          <h2>Tip %</h2>
+          <input type="number" placeholder="0.00"
+           onChange={(e) => setTip(e.target.value)}
+           />
+          <h2>No. of people splitting?</h2>
+          <input type="number" placeholder="0.00"
+           onChange={(e) => setPeople(e.target.value)}
+          />
+          <div className="Button"
+          onClick={() => calculateTotal(bill, tip, people)}
+          >
+            <button>Calculate</button>
+          </div>
+        <div className="Results">
+          <h2>Total Amount</h2>
+          {total >0 ? <h3>${total}</h3> : ""}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Calculator;
